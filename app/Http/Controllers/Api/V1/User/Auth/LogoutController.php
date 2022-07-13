@@ -21,6 +21,6 @@ class LogoutController extends Controller
 
         $user->token()->revoke();
 
-        return response()->json();
+        return response_json();
     }
 }
