@@ -22,7 +22,7 @@ class RegisterController extends Controller
      * @param \App\Http\Requests\Api\V1\User\RegisterRequest $request
      * @return \Illuminate\Http\JsonResponse
      */
-    public function register(RegisterRequest $request)
+    public function __invoke(RegisterRequest $request)
     {
         $user = $this->service->create($request);
 
