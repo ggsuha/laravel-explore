@@ -24,7 +24,7 @@ Route::group(['as' => 'admin.'], function () {
     Route::middleware('auth:admin')->group(function () {
         Route::get('/', function () {
             return view('welcome');
-        })->name('dashboard.index');
+        })->name('dashboard');
 
         Route::post('/logout', LogoutController::class)->name('logout');
     });
